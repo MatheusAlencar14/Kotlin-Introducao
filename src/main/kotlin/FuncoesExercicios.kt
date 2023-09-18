@@ -1,37 +1,34 @@
 fun main() {
 
-    var anos = 2
-    println(transforma(anos))
+    transforma(2)
 
-    var frase = "Eu serei um Desenvolvedor de sucesso!"
-    println(quantString(frase))
+    println(quantString("Eu serei um Desenvolvedor de sucesso!"))
 
-    var num = 3
-    println(cubo(num))
+    println(cubo(3))
 
-    println(milhas(num))
+    println(milhas(2.5f ))
+
+    println(troca("Como eu gostaria de estar na minha casa"))
 }
 //Escreva uma função que receba uma quantidade de anos e transforme em meses, dias,
 //minutos e segundos
 fun transforma(anos: Int) {
-    var meses = anos * 12
-    var dias = anos * 365
-    var horas = dias * 24
-    var minutos = horas * 60
-    var segundos = minutos * 60
-   return println("${anos} anos equivalem a:" +
-           "\n${meses} meses" +
-           "\n${dias} dias" +
-           "\n${horas} horas" +
-           "\n${minutos} minutos" +
-           "\n${segundos} segundos")
+    println("${anos} anos equivalem a:")
+    println("${anos * 12} meses")
+    println("${anos * 365} dias")
+    println("${anos * 365 * 24} horas")
+    println("${anos * 365 * 24 * 60} minutos")
+    println("${anos * 365 * 24 * 60 * 60} segundos")
 }
 
 //Escreva uma função que recebe uma String e retorna a quantidade de caracteres
-fun quantString(frase: String) = frase.length
+fun quantString(frase: String) :Int = frase.length
 
 //Escreva uma função que calcule o cubo de um número inteiro
 fun cubo(num: Int) = num * num * num
 
 //Escreva uma função que converta milhas para km
-fun milhas(num: Int) = num * 1.6
+fun milhas(num: Float) = num * 1.6
+
+//Escreva um programa que troque as letras "a" e "A" de uma String por "x"
+fun troca(frase: String) = frase.replace("a", "x", true).lowercase()
