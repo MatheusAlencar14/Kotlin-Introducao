@@ -21,4 +21,9 @@ fun main() {
         i--
     }
 
+    do {
+        print("$i ")
+        i++
+    } while (i < 30)
+
 }
